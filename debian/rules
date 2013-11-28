@@ -3,6 +3,8 @@
 # Verbose mode
 #export DH_VERBOSE=1
 
+export OSLO_PACKAGE_VERSION=$(shell dpkg-parsechangelog | sed -n -e 's/^Version: //p')
+
 %:
 	dh $@ --with python2
 
