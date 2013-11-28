@@ -1,0 +1,53 @@
+#!/usr/bin/make -f
+
+# Verbose mode
+#export DH_VERBOSE=1
+
+%:
+	dh $@ --with python2
+
+# clean sphinx build output
+override_dh_clean:
+	dh_clean
+	rm -rf swift.egg-info
+	rm -rf doc/build/* swift.egg-info/SOURCES.txt
+	rm -rf debian/*.upstart
+
+# build with sphinx documentation
+override_dh_auto_build:
+	dh_auto_build
+	mkdir -p doc/build
+	python setup.py build_sphinx
+
+ifeq (,$(findstring nocheck, $(DEB_BUILD_OPTIONS)))
+override_dh_auto_test:
+	nosetests test/functionalnosetests
+endif
+
+get-orig-source:
+	uscan --verbose --force-download --rename --destdir=../build-area
+
+override_dh_install:
+	dh_install --fail-missing --sourcedir=debian/tmp
+	install -D -m 0640 $(CURDIR)/debian/account-server.conf $(CURDIR)/debian/swift-account/etc/swift/account-server.conf
+	install -D -m 0640 $(CURDIR)/debian/container-server.conf $(CURDIR)/debian/swift-container/etc/swift/container-server.conf
+	install -D -m 0640 $(CURDIR)/debian/object-server.conf $(CURDIR)/debian/swift-object/etc/swift/object-server.conf
+
+override_dh_installinit:
+	if dpkg-vendor  --derives-from ubuntu ; then \
+			for i in debian/*.upstart.in ; do \
+				MYPKG=`echo $$i | sed 's/.upstart.in//'` ; \
+				cp $$MYPKG.upstart.in $$MYPKG.upstart ; \
+			done ; \
+	fi
+	dh_installinit --no-start
+
+	dh_installinit --no-start -pswift-container --name=swift-container-replicator
+	dh_installinit --no-start -pswift-container --name=swift-container-auditor
+	dh_installinit --no-start -pswift-container --name=swift-container-updater
+	dh_installinit --no-start -pswift-account --name=swift-account-replicator
+	dh_installinit --no-start -pswift-account --name=swift-account-auditor
+	dh_installinit --no-start -pswift-account --name=swift-account-reaper
+	dh_installinit --no-start -pswift-object --name=swift-object-replicator
+	dh_installinit --no-start -pswift-object --name=swift-object-auditor
+	dh_installinit --no-start -pswift-object --name=swift-object-updater

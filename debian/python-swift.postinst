@@ -1,0 +1,17 @@
+#!/bin/sh -e
+
+#DEBHELPER#
+
+if ! getent passwd swift > /dev/null ; then
+  adduser --system --quiet --disabled-login --disabled-password --no-create-home --group --shell /bin/false swift
+fi
+
+usermod -G adm swift
+
+if [ -d /var/cache/swift ] ; then
+  # Allow swift user to write to cache directory
+  chown root:swift /var/cache/swift
+  chmod 0775 /var/cache/swift
+fi
+
+exit 0
