@@ -14,6 +14,7 @@ override_dh_clean:
 	rm -rf swift.egg-info
 	rm -rf doc/build/* swift.egg-info/SOURCES.txt
 	rm -rf debian/*.upstart
+	rm -rf pbr-*.egg/
 
 # build with sphinx documentation
 override_dh_auto_build:
