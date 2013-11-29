@@ -1,4 +1,4 @@
-pbr>=0.5.21,<1.0
+pbr>=0.5.21
 dnspython>=1.9.4
 eventlet>=0.9.15
 greenlet>=0.3.1
