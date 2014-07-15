@@ -116,7 +116,12 @@ class AccountController(Controller):
         resp = self.make_requests(
             req, self.app.account_ring, account_partition, 'POST',
             req.swift_entity_path, [headers] * len(accounts))
-        if resp.status_int == HTTP_NOT_FOUND and self.app.account_autocreate:
+        if 'HTTP_X_ROLES' in req.environ:
+            roles = req.environ['HTTP_X_ROLES'].split(',')
+        else:
+            roles = []
+        if resp.status_int == HTTP_NOT_FOUND and (self.app.account_autocreate
+                                                  or 'ResellerAdmin' in roles):
             self.autocreate_account(req.environ, self.account_name)
             resp = self.make_requests(
                 req, self.app.account_ring, account_partition, 'POST',
