@@ -1,0 +1,36 @@
+#!/bin/bash
+#--------------------
+# Testing swift-proxy
+#--------------------
+set -e
+
+# copy config files
+mkdir -p /etc/swift 2>&1 > /dev/null
+cp /usr/share/doc/swift/swift.conf-sample /etc/swift/swift.conf 2>&1 > /dev/null
+cp `dirname $0`/proxy-server.conf /etc/swift/proxy-server.conf 2>&1 > /dev/null
+
+# create rings
+cd /etc/swift 2>&1 > /dev/null
+swift-ring-builder account.builder create 18 3 1 2>&1 > /dev/null
+swift-ring-builder container.builder create 18 3 1 2>&1 > /dev/null
+swift-ring-builder object.builder create 18 3 1 2>&1 > /dev/null
+
+swift-ring-builder account.builder add z1-127.0.0.1:6002/sda1 100 2>&1 > /dev/null
+swift-ring-builder container.builder add z1-127.0.0.1:6001/sda1 100 2>&1 > /dev/null
+swift-ring-builder object.builder add z1-127.0.0.1:6000/sda1 100 2>&1 > /dev/null
+
+swift-ring-builder account.builder rebalance 2>&1 > /dev/null
+swift-ring-builder container.builder rebalance 2>&1 > /dev/null
+swift-ring-builder object.builder rebalance 2>&1 > /dev/null
+
+DAEMONS=('swift-proxy' 'swift-object' 'swift-container' 'swift-account')
+for daemon in "${DAEMONS[@]}"; do
+    service $daemon restart 2>&1 > /dev/null
+    if pidof -x ${daemon}-server > /dev/null; then
+        echo "OK"
+    else
+        echo "ERROR: ${daemon} IS NOT RUNNING"
+        exit 1
+    fi
+done
+exit 0

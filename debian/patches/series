@@ -1,0 +1,4 @@
+fix-doc-no-network.patch
+fix-ubuntu-tests.patch
+ring-perms.patch
+CVE-2014-3497.patch

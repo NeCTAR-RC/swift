@@ -1,0 +1,3 @@
+Tests: python-swift swift-daemons
+Depends: python-swift, swift, swift-proxy, swift-object, swift-container, swift-account
+Restrictions: needs-root

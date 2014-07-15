@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/%7E/~/" https://launchpad.net/swift/+download https://launchpad.net/swift/.*/.*/.*/swift-(.*)\.tar\.gz
+http://tarballs.openstack.org/swift/ swift-(\d.*).tar.gz
