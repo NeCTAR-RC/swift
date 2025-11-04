@@ -1,0 +1,22 @@
+Description: Skip this test for Python 3 as it expects en_US.UTF-8
+  locale to be installed.
+Author: Corey Bryant <corey.bryant@canonical.com>
+Forwarded: not-needed
+
+--- a/test/unit/test_locale/test_locale.py
++++ b/test/unit/test_locale/test_locale.py
+@@ -17,11 +17,14 @@
+ import os
+ import unittest
+ import sys
++import testtools
+ 
+ from subprocess import check_output
+ 
+ 
+ class TestTranslations(unittest.TestCase):
++    @testtools.skipIf(sys.version_info >= (3, 6),
++                      "Skipped by Ubuntu, build chroot doesn't include en_US.UTF-8 by default")
+     def test_translations(self):
+         translated_message = check_output([sys.executable, __file__], env={
+             # Need to set this so py36 can do UTF-8, but we override later

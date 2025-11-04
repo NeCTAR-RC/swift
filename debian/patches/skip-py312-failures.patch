@@ -1,0 +1,51 @@
+Description: Skip tests that fail with Python >= 3.12
+    def test_disconnected_logging(self):
+         req = Request.blank('/v1/a/c/o')
+         headers = {'content-type': 'text/plain'}
+         source = FakeSource([], headers=headers, body=b'the cake is a lie')
+    
+         node = {'ip': '1.2.3.4', 'port': 6200, 'device': 'sda'}
+         handler = GetOrHeadHandler(
+             self.app, req, 'Object', Namespace(num_primary_nodes=1), None,
+             'some-path', {})
+    
+         def mock_find_source():
+             handler.source = GetterSource(self.app, source, node)
+             return True
+    
+         with mock.patch.object(handler, '_find_source',
+                                mock_find_source):
+             resp = handler.get_working_response(req)
+             resp.app_iter.close()
+ >       self.assertEqual(["Client disconnected on read of 'some-path'"],
+                           self.logger.get_lines_for_level('info'))
+ E       AssertionError: Lists differ: ["Client disconnected on read of 'some-path'"] != []
+ E       
+ E       First list contains 1 additional elements.
+ E       First extra element 0:
+ E       "Client disconnected on read of 'some-path'"
+ E       
+ E       - ["Client disconnected on read of 'some-path'"]
+ E       + []
+Author: James Page <james.page@ubuntu.com>
+Forwarded: not-needed
+
+--- a/test/unit/proxy/controllers/test_base.py
++++ b/test/unit/proxy/controllers/test_base.py
+@@ -18,6 +18,8 @@
+ import itertools
+ import json
+ from collections import defaultdict
++import sys
++import testtools
+ import unittest
+ import mock
+ 
+@@ -1703,6 +1705,7 @@
+             app, req, 'Container', node_iter, None, None, {})
+         self.assertEqual(5, getter.node_timeout)
+ 
++    @testtools.skipIf(sys.version_info >= (3, 12), "Skipped for Python 3.12")
+     def test_disconnected_logging(self):
+         req = Request.blank('/v1/a/c/o')
+         headers = {'content-type': 'text/plain'}

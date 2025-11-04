@@ -1,0 +1,3 @@
+version=3
+opts="uversionmangle=s/rc/~rc/" \
+ https://tarballs.opendev.org/openstack/swift/ swift-(\d.*).tar.gz

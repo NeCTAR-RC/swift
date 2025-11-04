@@ -1,0 +1,1361 @@
+swift (2.33.0-0ubuntu1~cloud0) jammy-caracal; urgency=medium
+
+  * New upstream release for the Ubuntu Cloud Archive.
+
+ -- Openstack Ubuntu Testing Bot <openstack-testing-bot@ubuntu.com>  Fri, 22 Mar 2024 11:23:01 +0000
+
+swift (2.33.0-0ubuntu1) noble; urgency=medium
+
+  * New upstream release for OpenStack Caracal.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 22 Mar 2024 09:23:39 +0000
+
+swift (2.32.0+git2024030809.4135133a-0ubuntu1) noble; urgency=medium
+
+  * New upstream snapshot for OpenStack Caracal.
+  * d/p/*: Refresh.
+
+ -- James Page <james.page@canonical.com>  Fri, 08 Mar 2024 09:33:39 +0000
+
+swift (2.32.0+git2024021508.3aba22fd-0ubuntu1) noble; urgency=medium
+
+  [ Corey Bryant ]
+  * d/gbp.conf, .launchpad.yaml: Sync from cloud-archive-tools for
+    caracal.
+
+  [ James Page ]
+  * New upstream snapshot for OpenStack Caracal.
+  * d/control: Drop BD on python3-boto (LP: #2052437).
+  * d/p/*: refresh.
+  * d/swift-proxy.install: Add swift-reload binary.
+  * d/p/skip-py312-failures.patch: Skip single test that fails under
+    Python 3.12 until resolved upstream.
+  * d/p/skip-py311-test-failures.patch,skip-test-db.patch: Drop, fixed
+    upstream.
+  * d/rules: Use pybuild to run pytest unit tests.
+  * d/source/options: Ignore .launchpad.yaml.
+  * d/rules: Ensure config samples are present in build directory for
+    test execution.
+  * d/swift-*.install: Drop unneeded usage of dh-exec.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 15 Feb 2024 10:03:02 +0000
+
+swift (2.32.0+git2023090714.8ce961ed-0ubuntu1) mantic; urgency=medium
+
+  * New upstream snapshot for OpenStack Bobcat.
+  * d/p/*: Rebased.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 07 Sep 2023 14:49:35 -0400
+
+swift (2.31.1+git2023071215.7cc8a017-0ubuntu2) mantic; urgency=medium
+
+  * d/rules: Run unit tests with pytest.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 13 Jul 2023 16:41:53 -0400
+
+swift (2.31.1+git2023071215.7cc8a017-0ubuntu1) mantic; urgency=medium
+
+  * d/gbp.conf, .launchpad.yaml: Sync from cloud-archive-tools for
+    bobcat.
+  * New upstream snapshot for OpenStack Bobcat.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 12 Jul 2023 15:17:50 -0400
+
+swift (2.31.1-0ubuntu1) lunar; urgency=medium
+
+  * New upstream release for OpenStack Antelope.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 23 Mar 2023 19:45:56 -0400
+
+swift (2.31.0+git2023030309.a2952962-0ubuntu1) lunar; urgency=medium
+
+  * New upstream snapshot for OpenStack Antelope.
+  * d/p/skip-py311-test-failures.patch: Updated with new failing test.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 03 Mar 2023 09:53:52 -0500
+
+swift (2.31.0+git2023020814.488f8c83-0ubuntu1) lunar; urgency=medium
+
+  * New upstream snapshot for OpenStack Antelope.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 08 Feb 2023 14:31:43 -0500
+
+swift (2.30.0+git2023011011.9c5cbaa5-0ubuntu1) lunar; urgency=medium
+
+  * New upstream snapshot for OpenStack Antelope.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/skip-py311-test-failures.patch: Skip failing Python 3.11 tests
+    until fixed upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 10 Jan 2023 11:12:39 -0500
+
+swift (2.30.0+git2022100608.49d35e0c3-0ubuntu1) kinetic; urgency=medium
+
+  * New upstream snapshot for OpenStack Zed.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 06 Oct 2022 08:46:18 -0400
+
+swift (2.30.0+git2022091213.ce184edd7-0ubuntu1) kinetic; urgency=medium
+
+  * New upstream snapshot for OpenStack Zed.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 12 Sep 2022 14:00:17 -0400
+
+swift (2.29.1+git2022071815.45e13ff4c-0ubuntu1) kinetic; urgency=medium
+
+  * New upstream snapshot for OpenStack Zed.
+  * d/control: Ensure openstack-pkg-tools has CIS hardening for log files
+    and pkgos_adduser.
+  * d/python3-swift.postinst: CIS hardening update to switch adduser to use
+    /usr/sbin/nologin when creating system account that does not run a shell.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 18 Jul 2022 15:07:31 -0400
+
+swift (2.29.1+git2022060710.93c432342-0ubuntu1) kinetic; urgency=medium
+
+  * New upstream snapshot for OpenStack Zed.
+  * d/control: Update standards version to 4.6.1.
+  * d/p/skip-online-test.patch: Rebased.
+  * d/p/skip-test-db.patch: Skip section of test until reported bug
+    is fixed.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 07 Jun 2022 10:17:06 -0400
+
+swift (2.29.1-0ubuntu1) jammy; urgency=medium
+
+  * New upstream release for OpenStack Yoga.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 31 Mar 2022 08:19:54 -0400
+
+swift (2.29.0+git2022030314.3ff3076ce-0ubuntu1) jammy; urgency=medium
+
+  * New upstream snapshot for OpenStack Yoga.
+  * d/p/skip-online-test.patch: Rebased.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 03 Mar 2022 14:45:42 -0500
+
+swift (2.28.0+git2022011309.32da73f5c-0ubuntu1) jammy; urgency=medium
+
+  * New upstream snapshot for OpenStack Yoga.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/control: Bump debhelper compat to 13.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 13 Jan 2022 09:46:28 -0500
+
+swift (2.28.0+git2021121320.876377435-0ubuntu1) jammy; urgency=medium
+
+  * New upstream snapshot for OpenStack Yoga.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 13 Dec 2021 20:05:27 -0500
+
+swift (2.28.0+git2021120815.1859f2e16-0ubuntu1) jammy; urgency=medium
+
+  * New upstream snapshot for OpenStack Yoga.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 08 Dec 2021 15:54:30 -0500
+
+swift (2.28.0+git2021090911.5d52afbe4-0ubuntu1) impish; urgency=medium
+
+  * New upstream snapshot for OpenStack Xena.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 09 Sep 2021 11:48:51 -0400
+
+swift (2.27.0+git2021072212.4fc567cb2-0ubuntu1) impish; urgency=medium
+
+  * New upstream snapshot for OpenStack Xena.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 22 Jul 2021 12:35:32 -0400
+
+swift (2.27.0+git2021062816.8e1209d2b-0ubuntu1) impish; urgency=medium
+
+  * New upstream snapshot for OpenStack Xena.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/skip-online-test.patch: Rebased.
+  * d/p/000*-fix-py39-ut-failures.patch: Dropped. Fixed upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 28 Jun 2021 16:22:50 -0400
+
+swift (2.27.0-0ubuntu2) hirsute; urgency=medium
+
+  * d/p/000*-fix-py39-ut-failures.patch: Cherry-picked from upstream
+    to fix py39 unit test failures.
+  * d/p/skip-failing-py39-tests.patch: Dropped. No longer needed.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 26 Mar 2021 08:02:43 -0400
+
+swift (2.27.0-0ubuntu1) hirsute; urgency=medium
+
+  * New upstream release for OpenStack Wallaby.
+  * d/p/skip-failing-py39-tests.patch: Skip tests that fail for py39 on
+    upstream and distro.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 25 Mar 2021 12:24:58 -0400
+
+swift (2.26.0+git2021012914.833d7f1d1-0ubuntu1) hirsute; urgency=medium
+
+  * New upstream snapshot for OpenStack Wallaby.
+  * d/rules: Add PATH with build binary path to test execution, allowing
+    unit tests to access swift binaries.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 29 Jan 2021 14:22:33 -0500
+
+swift (2.26.0+git2020121115.36107b4a6-0ubuntu1) hirsute; urgency=medium
+
+  * New upstream snapshot for OpenStack Wallaby.
+  * d/p/0001-Get-unit-tests-passing-on-py39.patch: Remove as the fix
+    landed upstream.
+  * d/p/fix-deployment-guide-header.patch: Remove as patch is no longer needed.
+
+ -- Chris MacNaughton <chris.macnaughton@ubuntu.com>  Fri, 11 Dec 2020 15:35:56 +0000
+
+swift (2.26.0-0ubuntu2) hirsute; urgency=medium
+
+  * d/patches/0001-Get-unit-tests-passing-on-py39.patch: Backport Python 3.9
+    fix from upstream.
+
+ -- Michael Hudson-Doyle <michael.hudson@ubuntu.com>  Mon, 30 Nov 2020 13:23:36 +1300
+
+swift (2.26.0-0ubuntu1) groovy; urgency=medium
+
+  [ Chris MacNaughton ]
+  * d/control: Update VCS paths for move to lp:~ubuntu-openstack-dev.
+
+  [ Corey Bryant ]
+  * New upstream release for OpenStack Victoria.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 09 Oct 2020 13:28:49 -0400
+
+swift (2.25.1~git2020091517.f8a9a6e11-0ubuntu1) groovy; urgency=medium
+
+  [ Chris MacNaughton ]
+  * d/control: Remove Breaks/Replaces that are older than Focal (LP: #1878419).
+
+  [ Corey Bryant ]
+  * New upstream snapshot for OpenStack Victoria.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 15 Sep 2020 17:14:38 -0400
+
+swift (2.25.1~git2020073017.d6399b32e-0ubuntu1) groovy; urgency=medium
+
+  * New upstream snapshot for OpenStack Victoria.
+  * d/control, d/copyright: Update upstream URL.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 30 Jul 2020 17:28:57 -0400
+
+swift (2.25.1~git2020070613.2e001431f-0ubuntu1) groovy; urgency=medium
+
+  * New upstream snapshot for OpenStack Victoria.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/drop-ipaddress-requirement.patch: Dropped. No longer needed as package
+    is Python3-only.
+  * d/control, d/compat: Switch to debhelper compat 12.
+  * d/control: Update Standards-Version to 4.5.0.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 06 Jul 2020 13:04:33 -0400
+
+swift (2.25.0-0ubuntu3) groovy; urgency=medium
+
+  * d/t/swift-daemons: Update to give systemd units time to restart.
+
+ -- Chris MacNaughton <chris.macnaughton@canonical.com>  Thu, 25 Jun 2020 11:30:03 +0000
+
+swift (2.25.0-0ubuntu2) groovy; urgency=medium
+
+  [ Chris MacNaughton ]
+  * Update to use Systemd unit files (LP: #1827340, LP: #1800676)
+    * d/*.init.in: Import init script (systemd) generation from Debian.
+    * d/*.upstart: Removed.
+    * d/*.init: Removed
+    * d/*.generator: Import from Debian.
+    * d/*.install: Added reference to generator files
+    * d/gen-init: Import from Debian. Remove WorkingDirectory.
+
+  [ James Page ]
+  * d/control: Add sphinxdoc:Depends to swift-doc.
+  * d/*: wrap-and-sort -bast.
+
+ -- Chris MacNaughton <chris.macnaughton@canonical.com>  Wed, 24 Jun 2020 09:59:02 +0100
+
+swift (2.25.0-0ubuntu1) groovy; urgency=medium
+
+  * New upstream release for OpenStack Ussuri (LP: #1877642).
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 14 May 2020 14:47:36 -0400
+
+swift (2.24.1~git2020041316.a495f1e32-0ubuntu1) focal; urgency=medium
+
+  * d/watch: Update tarball URL to opendev.org.
+  * New upstream snapshot for OpenStack Ussuri.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 13 Apr 2020 16:25:31 -0400
+
+swift (2.24.1~git2020032711.712bf3c9f-0ubuntu2) focal; urgency=medium
+
+  * d/control, d/rules: Move installation of /etc/swift/ files to
+    python3-swift package.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 30 Mar 2020 08:26:09 -0400
+
+swift (2.24.1~git2020032711.712bf3c9f-0ubuntu1) focal; urgency=medium
+
+  * New upstream snapshot for OpenStack Ussuri.
+  * d/glance-common.postinst: Set default ownership and permissions for
+    /etc/<pkg> (LP: #1859422).
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 27 Mar 2020 11:39:24 -0400
+
+swift (2.24.0-0ubuntu1) focal; urgency=medium
+
+  * New upstream release for OpenStack Ussuri.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 13 Feb 2020 14:01:08 -0500
+
+swift (2.24.0~git2019121715.e890b0f0f-0ubuntu1) focal; urgency=medium
+
+  * New upstream snapshot for OpenStack Ussuri.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/rules: Switch pybuild.
+  * d/rules: Update PBR_VERSION to handle ~git versioning.
+  * d/p/skip-test-local-py36.patch: Update to skip for all Py3 versions.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 17 Dec 2019 15:16:47 -0500
+
+swift (2.23.1-0ubuntu1) focal; urgency=medium
+
+  * New stable point release for OpenStack Train (LP: #1853311).
+
+ -- Sahid Orentino Ferdjaoui <sahid.ferdjaoui@canonical.com>  Mon, 02 Dec 2019 15:19:23 +0100
+
+swift (2.23.0-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release for OpenStack Train.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 16 Oct 2019 11:26:04 -0400
+
+swift (2.22.0-0ubuntu2) eoan; urgency=medium
+
+  * d/control: Add Breaks/Replaces on python-swift to ensure that
+    upgrades from py2->py3 are handled correctly (LP: #1847576).
+
+ -- James Page <james.page@ubuntu.com>  Thu, 10 Oct 2019 12:04:12 +0100
+
+swift (2.22.0-0ubuntu1) eoan; urgency=medium
+
+  * New upstream release for OpenStack Train.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 26 Sep 2019 15:15:04 +0100
+
+swift (2.22.0~b2~git2019073018.d33e569be-0ubuntu1) eoan; urgency=medium
+
+  * New upstream snapshot for OpenStack Train.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Sahid Orentino Ferdjaoui <sahid.ferdjaoui@canonical.com>  Tue, 30 Jul 2019 18:52:11 +0200
+
+swift (2.22.0~b1~git2019071110.e62f07d98-0ubuntu3) eoan; urgency=medium
+
+  * d/rules: Use pkgos-dh_auto_install to install Python 3 modules.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 18 Jul 2019 11:48:40 -0400
+
+swift (2.22.0~b1~git2019071110.e62f07d98-0ubuntu2) eoan; urgency=medium
+
+  * d/control: Restore python-setuptools BDI for UCA backport.
+  * d/p/skip-test-local-py36.patch, d/control: Skip locale test for Python
+    3.6 as locale is not available by default in build environment.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 11 Jul 2019 14:05:49 -0400
+
+swift (2.22.0~b1~git2019071110.e62f07d98-0ubuntu1) eoan; urgency=medium
+
+  * New upstream snapshot for OpenStack Train.
+  * d/control, d/rules, d/python(3)-swift*: Add support for Python 3
+    and remove support for Python 2.
+  * d/p/drop-ipaddress-requirement.patch: Drop ipaddress from requirements.txt.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 11 Jul 2019 10:14:31 -0400
+
+swift (2.22.0~b1~git2019061305.aa2f1db1b-0ubuntu1) eoan; urgency=medium
+
+  * New upstream snapshot for OpenStack Train.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/swift-container.install: Wildcard install of swift-container-*
+    binaries.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 13 Jun 2019 15:13:13 +0100
+
+swift (2.21.0-0ubuntu1) disco; urgency=medium
+
+  * New upstream release for OpenStack Stein.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 08 Apr 2019 09:13:45 +0100
+
+swift (2.20.0-0ubuntu2) disco; urgency=medium
+
+  * d/control: Add python-keystonemiddleware to Depends (LP: #1815093).
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 07 Feb 2019 15:05:35 -0500
+
+swift (2.20.0-0ubuntu1) disco; urgency=medium
+
+  * New upstream release for OpenStack Stein.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 31 Jan 2019 12:43:00 -0500
+
+swift (2.19.0-0ubuntu1) cosmic; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/swift.install: Install binary for new CLI client swift-ring-composer.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 30 Aug 2018 10:33:03 -0400
+
+swift (2.18.0-0ubuntu1) cosmic; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/swift-container.install, d/swift.install,
+    swift-container.swift-container-sharder.init: Install
+    usr/bin/swift-container-sharder and usr/bin/swift-manage-shard-ranges and
+    add init file for swift-container-sharder.
+  * d/control: Update Standards-Version to 4.1.4.
+  * d/control, d/tests/*: Drop obsolete autopkgtest header and enable
+    autopkgtest-pkg-python testsuite.
+  * d/control, d/watch: Use https URLs.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 13 Jun 2018 15:14:00 -0400
+
+swift (2.17.0-0ubuntu1) bionic; urgency=medium
+
+  [ James Page ]
+  * d/p/*: Rebase.
+
+  [ Corey Bryant ]
+  * New upstream release candidate for OpenStack Queens.
+  * d/*: wrap-and-sort -bast.
+  * d/control: Update Standards-Version to 4.1.2.
+  * d/control: Bump debhelper compat to 10.
+  * d/control: Align (Build-)Depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 14 Feb 2018 09:24:36 -0500
+
+swift (2.16.0-0ubuntu2) bionic; urgency=medium
+
+  * d/rules, d/swift-doc.docs: Adjust sphinx-build command and drop
+    swift-doc.docs as the sphinx-build command already installs the files in
+    the temp directory.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 22 Nov 2017 14:07:55 -0500
+
+swift (2.16.0-0ubuntu1) bionic; urgency=medium
+
+  * New upstream release.
+  * d/control: Align (Build-)Depends with upstream.
+  * d/p/*: Rebase, drop patches accepted upstrea or no longer needed.
+  * d/compat: Bump to 9, inline with BD.
+  * d/swift.install: Drop swift-temp-url, no long shipped.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 17 Nov 2017 10:40:50 +0000
+
+swift (2.15.1-0ubuntu3) artful; urgency=medium
+
+  * d/p/update-test-drop-privs.patch: Drop group comparison from
+    drop_privileges test as it does not appear to be valid (LP: #1724342).
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 17 Oct 2017 15:01:59 -0400
+
+swift (2.15.1-0ubuntu2) artful; urgency=medium
+
+  * d/p/fix-deployment-guide-header.patch: Extend deployment guide headers
+    to fix sphinx error for xenial-pike backport.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 25 Aug 2017 17:57:20 -0400
+
+swift (2.15.1-0ubuntu1) artful; urgency=medium
+
+  * New upstream point release for OpenStack Pike.
+  * d/p/*: Rebased.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 24 Aug 2017 12:29:58 -0400
+
+swift (2.15.0-0ubuntu1) artful; urgency=medium
+
+  * d/control: Drop oslosphinx and update min version of openstackdocstheme.
+  * New upstream release for OpenStack Pike.
+  * d/p/drop-openstackdoctheme.patch: Temporarily drop openstackdocstheme
+    sphinx extension until sphinx>=1.6.2 is available.
+  * d/p/skip-online-test.patch: Skip test that is failing without network
+    access.
+  * d/swift-object.install: Install swift-object-relinker binary.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Tue, 01 Aug 2017 09:20:37 -0400
+
+swift (2.13.1-0ubuntu1) artful; urgency=medium
+
+  [ Chuck Short ]
+  * d/patches/use-pbr2.patch: Use pbr2 by default.
+  * d/patches/fix-doc-no-network.patch: Dropped not longer required.
+
+  [ James Page ]
+  * New upstream point release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 16 Jun 2017 11:45:54 +0100
+
+swift (2.13.0-0ubuntu1) zesty; urgency=medium
+
+  * New upstream release for OpenStack Ocata.
+  * d/control: Align (build-)depends with upstream.
+  * d/README.Source: Removed it still mentioned bzr to package swift.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 16 Feb 2017 05:46:37 -0500
+
+swift (2.12.0-0ubuntu1) zesty; urgency=medium
+
+  * New upstream version.
+  * d/p/avoid-infinite-loop-while-placing-parts.patch: Dropped. Included in
+    new upstream version.
+  * New upstream release for OpenStack Ocata.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Mon, 19 Dec 2016 09:18:26 -0500
+
+swift (2.11.0-0ubuntu2) zesty; urgency=medium
+
+  * d/p/avoid-infinite-loop-while-placing-parts.patch: Cherry-picked from
+    upstream master branch to avoid infinite loop while placing parts
+    (LP: #1642538).
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 09 Dec 2016 09:05:26 -0500
+
+swift (2.11.0-0ubuntu1) zesty; urgency=medium
+
+  [ Corey Bryant ]
+  * d/control: Align python-pyeclib with upstream.
+
+  [ David Della Vecchia ]
+  * New upstream release for OpenStack Ocata.
+  * d/control: Align (build-)depends with upstream.
+
+ -- David Della Vecchia <ddv@canonical.com>  Mon, 21 Nov 2016 09:18:15 -0500
+
+swift (2.10.0-0ubuntu1) yakkety; urgency=medium
+
+  * New upstream release for OpenStack Newton.
+  * d/control: Align (build-)depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Wed, 28 Sep 2016 14:06:46 -0400
+
+swift (2.9.0-0ubuntu1) yakkety; urgency=medium
+
+  * New upstream release for OpenStack Newton.
+  * d/control: Align (build-)depends with upstream.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Fri, 15 Jul 2016 08:32:18 -0400
+
+swift (2.8.0-0ubuntu1) yakkety; urgency=medium
+
+  * New upstream version.
+  * d/p/drop-sphinx-git.patch: Dropped, no longer required.
+  * d/control: Bumped Standards-Version, no changes.
+  * d/swift-container.docs: Install container-sync-realms.conf sample
+    configuration file (LP: #1586483).
+  * d/swift-object.swift-object-reconstructor.{init|upstart},rules:
+    Add init and upstart configuration files for swift-object-reconstructor
+    (LP: #1522448).
+
+ -- James Page <james.page@ubuntu.com>  Fri, 10 Jun 2016 11:34:52 +0100
+
+swift (2.7.0-0ubuntu2) xenial; urgency=medium
+
+  * d/tests/swift-daemons: Set replica count for each ring to 1, resolving
+    autopkgtest failure during rebalance operations.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 11 Apr 2016 12:21:44 +0100
+
+swift (2.7.0-0ubuntu1) xenial; urgency=medium
+
+  * New upstream release for OpenStack Mitaka.
+  * d/p/drop-sphinx-git.patch: Rebased.
+  * d/p/fix-doc-no-network.patch: Rebased.
+
+ -- David Della Vecchia <ddv@canonical.com>  Fri, 08 Apr 2016 09:02:57 -0400
+
+swift (2.6.0-0ubuntu1) xenial; urgency=medium
+
+  [ David Della Vecchia ]
+  * New upstream release for OpenStack Mitaka.
+  * d/control: Align (build-)depends with upstream.
+  * d/p/pyeclib-version.patch: Removed, fixed in upstream.
+  * d/p/sphinx.patch: Remove git command to prevent build errors.
+
+  [ Corey Bryant ]
+  * d/p/sphinx.patch: Dropped in favor of adding git to BD's.
+  * d/control: Add git to build-depends for sphinx-build.
+  * d/control: Add python-cffi to BDs to fix failing tests.
+  * d/p/drop-sphinx-git.patch, d/control: Drop use of git from sphinx config.
+
+ -- Corey Bryant <corey.bryant@canonical.com>  Thu, 10 Mar 2016 13:34:13 -0500
+
+swift (2.5.0-0ubuntu1) wily; urgency=medium
+
+  * New upstream release for OpenStack Liberty.
+  * d/control,python-swift.postinst: Tidy lintian warning messages.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 08 Oct 2015 06:16:59 -0700
+
+swift (2.4.0-0ubuntu1) wily; urgency=medium
+
+  * New upstream release:
+    - d/p/CVE-2015-1856.patch,
+      d/p/fix-tempauth-acl-checks.patch,
+      d/p/increase-httplib-maxheaders.patch,
+      d/p/x-auth-token-should-be-bytestring.patch:
+      Dropped, included upstream.
+  * Align (build-)depends with upstream, wrap-and-sort.
+  * d/p/pyeclib-version.patch: Specify minimum bound for pyeclib only.
+  * Install new swift-object-reconstructor and swift-ring-builder-analyzer
+    binaries.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 07 Sep 2015 13:00:03 +0100
+
+swift (2.2.2-0ubuntu1.3) vivid-security; urgency=medium
+
+  [ Marc Deslauriers ]
+  * SECURITY UPDATE: object deletion via x-versions-location container
+    - debian/patches/CVE-2015-1856.patch: prevent unauthorized delete in
+      swift/proxy/controllers/obj.py, added tests to
+      test/functional/tests.py.
+    - CVE-2015-1856
+
+  [ Jamie Strandboge ]
+  * debian/patches/x-auth-token-should-be-bytestring.patch: update for
+    functional test suite
+  * debian/patches/fix-tempauth-acl-checks.patch: fix tempauth acl checks when
+    simplejson has no speedups
+  * debian/patches/increase-httplib-maxheaders.patch: fix testuite and
+    increase httplib._MAXHEADERS
+
+ -- Jamie Strandboge <jamie@ubuntu.com>  Thu, 30 Jul 2015 12:24:47 -0500
+
+swift (2.2.2-0ubuntu1) vivid; urgency=medium
+
+  * New upstream release. 
+  * debian/patches/fixup-32bit-max-file-size.patch: Dropped no longer needed.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 09 Feb 2015 13:40:34 -0500
+
+swift (2.2.1-0ubuntu2) vivid; urgency=medium
+
+  * Systemd enablement:
+    - d/*.init: Re-instate and re-write original init scripts. 
+    - d/*: Tidy incorrectly named init script files.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 12 Jan 2015 10:42:51 +0000
+
+swift (2.2.1-0ubuntu1) vivid; urgency=medium
+
+  [ Chuck Short ]
+  * Open for Vivid.
+  * d/control: Update branch locations.
+
+  [ James Page ]
+  * New upstream release:
+    - d/p/*: Refresh.
+  * d/control: Bumped Standards-Version 3.9.6, no changes.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 19 Dec 2014 14:33:19 +0000
+
+swift (2.2.0-0ubuntu1) utopic; urgency=medium
+
+  [ Corey Bryant ]
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 16 Oct 2014 15:47:13 -0400
+
+swift (2.2.0~rc1-0ubuntu3) utopic; urgency=medium
+
+  * Fix autopkg tests due to upstream mandatory configuration changes:
+    - d/tests/swift-daemons,proxy-server.conf: Switch to using upstream
+      provided sample proxy server configuration, drop test specific
+      configuration.
+    - d/*.conf: Set default bind_port values inline with upstream.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 09 Oct 2014 11:51:59 +0100
+
+swift (2.2.0~rc1-0ubuntu2) utopic; urgency=medium
+
+  * d/p/fixup-32bit-max-file-size.patch: Limit MAX_FILE_SIZE on 32bit
+    architectures during testing, fixing FTBFS on i386 builders
+    (LP: #1378810).
+  * d/p/fix-ubuntu-tests.patch: Drop, superceeded by above.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 09 Oct 2014 09:57:04 +0100
+
+swift (2.2.0~rc1-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release candidate for OpenStack Juno:
+    - d/p/*: Refreshed.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 06 Oct 2014 15:05:01 +0100
+
+swift (2.1.0-0ubuntu1) utopic; urgency=medium
+
+  [ Chuck Short ]
+  * debian/patches/fix-doc-no-network.patch: Refreshed.
+  * debian/control: Add python-oslosphinx as a build dependency.
+
+  [ James Page ]
+  * New upstream release for OpenStack Juno.
+  * d/copyright: Add linebreaks to fixup file-without-copyright-
+    information warning.
+
+ -- James Page <james.page@ubuntu.com>  Mon, 06 Oct 2014 10:06:11 +0100
+
+swift (2.0.0-0ubuntu2) utopic; urgency=medium
+
+  * Do not compress conf-sample files in the doc directories (used in
+    the autopkg tests).
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 13 Aug 2014 12:26:45 +0200
+
+swift (2.0.0-0ubuntu1) utopic; urgency=medium
+
+  * New upstream release.
+  * debian/control: Open up juno release
+  * debian/patches/ring-perms.patch: Dropped no longer needed.
+  * debian/switf-container.install: Add swift-reconciler-enqueue
+    and swift-container-reconciler.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 08 Jul 2014 10:31:47 -0400
+
+swift (1.13.1-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release (LP: #1299055). 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 17 Apr 2014 04:52:50 -0400
+
+swift (1.13.1~rc2-0ubuntu1) trusty; urgency=medium
+
+  [ Chuck Short ]
+  * New upstream release candidate (LP: #1299055).
+
+  [ James Page ]
+  * d/control: Add appropriate Breaks/Replaces to support move of man pages
+    between binary packages in 1.13.1~rc1-0ubuntu1 (LP: #1306241).
+
+ -- James Page <james.page@ubuntu.com>  Mon, 14 Apr 2014 11:03:23 +0100
+
+swift (1.13.1~rc1-0ubuntu2) trusty; urgency=medium
+
+  * d/p/ring-perms.patch: Ensure that generated rings can be read by
+    the swift user, fixing autopkgtest failure (LP: #1302700). 
+
+ -- James Page <james.page@ubuntu.com>  Sun, 06 Apr 2014 21:10:51 +0100
+
+swift (1.13.1~rc1-0ubuntu1) trusty; urgency=medium
+
+  [ Chuck Short ]
+  * Add new binaries:
+    - d/swift-container.install: Add swift-container-info binary.
+    - d/swift-account.install: Add swift-account-info binary.
+
+  [ James Page ]
+  * New upstream release candidate (LP: #1299055). 
+  * d/rules: Tidy dh_clean override.
+  * d/rules,swift-doc.docs: Re-enable documentation build.
+  * d/*.manpages: Rejig manpage installs into correct packages.
+  * d/container-server.conf: Add missing container-sync section
+    (LP: #1290813).
+  * d/*: Wrap-and-sort.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 04 Apr 2014 10:57:51 +0100
+
+swift (1.13.0-0ubuntu1) trusty; urgency=medium
+
+  [ Chuck Short ]
+  * New upstream release.
+
+  [ James Page ]
+  * Add object-expirer package and associated configuration (LP: #1235495):
+    - d/control: Add swift-object-expirer package, break/replace swift-object
+      from earlier versions.
+    - d/swift-object.install: Drop install of swift-object-expirer.
+    - d/swift-object-expirer.{install,upstart}: Install swift-object-expirer
+      and associated upstart configuration.
+    - d/rules,object-expirer.conf: Provide basic object-expirer configuration.
+    - debian/swift-object-expirer.docs: Add full example configuration to docs.
+  * d/rules,swift-container.swift-container-sync.upstart: Add upstart
+    configuration for swift-container-sync process (LP: #1250171).
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 06 Mar 2014 12:29:10 -0500
+
+swift (1.12.0-0ubuntu1) trusty; urgency=medium
+
+  * New upstream release.
+  * debian/patches/fix-ubuntu-tests.patch: Rediffed.
+  * debian/rules: Add pythonpath for tests.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Wed, 29 Jan 2014 09:14:25 -0500
+
+swift (1.11.0-0ubuntu2) trusty; urgency=low
+
+  * d/tests/swift-daemons: Use service command to restart daemons instead
+    of directly using non-existent scripts in /etc/init.d.
+
+ -- James Page <james.page@ubuntu.com>  Fri, 13 Dec 2013 09:14:19 +0000
+
+swift (1.11.0-0ubuntu1) trusty; urgency=low
+
+  [ Chuck Short ]
+  * debian/control: open icehouse release.
+  * debian/rules:
+    - Fix doc installation.
+    - Removed debian distribution checking.
+  * Removed init scripts, they dont get installed anyways.
+  * Renamed upstart.in to regular upstart jobs.
+  * debian/swift-doc.docs: Drop doc/build/html.
+  * debian/swift.install: Remove swift-bench and swift-bench-client, it has
+    moved into its own project.
+  * debian/control: Suggest swift-bench.
+  * debian/fix-ubuntu-tests.patch: Disable tests that fail on buildds.
+
+  [ James Page ]
+  * d/rules: Don't clean debian/*.upstart; we need those now! 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 12 Dec 2013 10:50:46 -0500
+
+swift (1.10.0-0ubuntu1) saucy; urgency=low
+
+  * New upstream release (LP: #1236462).
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 17 Oct 2013 10:26:18 -0400
+
+swift (1.10.0~rc1-0ubuntu1) saucy; urgency=low
+
+  * New upstream release candidate.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Wed, 09 Oct 2013 15:05:24 -0400
+
+swift (1.9.1-0ubuntu3) saucy; urgency=low
+
+  * d/python-swift.postinst: Allow swift user to write to /var/cache/swift,
+    resolving repeated errors in swift syslog (LP: #1234657).
+
+ -- James Page <james.page@ubuntu.com>  Fri, 04 Oct 2013 16:21:14 +0100
+
+swift (1.9.1-0ubuntu2) saucy; urgency=low
+
+  * d/control: Add missing dependency on python-dnspython >= 1.10.0.
+  * d/control: Wrap and sort.
+
+ -- James Page <james.page@ubuntu.com>  Wed, 25 Sep 2013 16:08:35 +0100
+
+swift (1.9.1-0ubuntu1) saucy; urgency=low
+
+  [ James Page ]
+  * d/control: Update VCS fields for new branch locations.
+
+  [ Chuck Short ]
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 13 Aug 2013 10:37:13 -0400
+
+swift (1.9.0-0ubuntu1) saucy; urgency=low
+
+  [ Chuck Short ]
+  * New upstream release.
+  * debian/swift.install: Add swift-config.
+  * debian/control: Nump standards version to 3.9.4
+ 
+  [ Yolanda Robla ]
+  * debian/tests: added autopkg tests
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 02 Jul 2013 10:26:07 -0500
+
+swift (1.8.0-0ubuntu1) raring; urgency=low
+
+  * New upstream release. 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 04 Apr 2013 10:38:18 -0500
+
+swift (1.8.0~rc2-0ubuntu1) raring; urgency=low
+
+  * New usptream release candidate for grizzly.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 02 Apr 2013 09:06:48 -0500
+
+swift (1.8.0~rc1-0ubuntu1) raring; urgency=low
+
+  * New upstream release candidate for grizzly. 
+
+ -- Chuck Short <zulcss@ubuntu.com>  Wed, 20 Mar 2013 08:19:17 -0500
+
+swift (1.7.6-0ubuntu1) raring; urgency=low
+
+  *  New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 28 Jan 2013 09:44:34 -0600
+
+swift (1.7.5-0ubuntu1) raring; urgency=low
+
+  * New upstream release.
+  * debian/control: Dropped python-webob.
+  * debian/swift.install: Add swift-bench-client.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Wed, 14 Nov 2012 12:11:47 -0600
+
+swift (1.7.4-0ubuntu2) quantal; urgency=low
+
+  * debian/control: Conflicts/Breaks on swift 1.6.0-ubuntu1 when upgrading 
+    from precise, since the swift client has been moved to python-swiftclient.
+    (LP: #1061064)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 11 Oct 2012 09:06:02 -0500
+
+swift (1.7.4-0ubuntu1) quantal; urgency=low
+
+  * New upstream release. 
+  * debian/rules: Fail to build the packages if testsuite fails.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Wed, 26 Sep 2012 09:19:43 -0500
+
+swift (1.7.2-0ubuntu1) quantal; urgency=low
+
+  * New upstream release, this release fixes a major 
+    regression introduced in the last release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 20 Sep 2012 08:42:59 -0500
+
+swift (1.7.0-0ubuntu1) quantal; urgency=low
+
+  [ Soren Hansen ]
+  * Update debian/watch to account for symbolically named tarballs and
+    use newer URL.
+  * Run unit tests at build time.
+  * Fix Launchpad URLs in debian/watch.
+
+  [ Chuck Short ]
+  * New upstream release
+  * debian/control: Add python-mock as a build dep
+  * debian/rules: Dont fail if testsuite fails.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 07 Sep 2012 19:02:36 -0500
+
+swift (1.6.0-0ubuntu1) quantal; urgency=low
+
+  [ Adam Gandelman ]
+  * debian/patches/fix-ubuntu-unitteests.patch: Refreshed against tarball
+    generated by sdist.
+  * debian/control: Add python-swiftclient to Build-Depends.
+  * debian/swift.install: Remove swift CLI client, moved to
+    python-swiftclient.
+  * debian/patches/fix-ubuntu-unittests.patch: Dropped. Similar upstream
+    commit ensures logging exceptions are properly handled.
+  * debian/rules: *Temporarily* disable test suite.
+
+  [ Chuck Short ]
+  * New upstream version.
+  * python-swift.dirs: Add /var/cache/swift
+  * debian/man/*: Removed used upstream man pages and replaced
+    with upstream manpages. (LP: #1006671)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 07 Aug 2012 09:31:35 -0500
+
+swift (1.5.0-0ubuntu1) quantal; urgency=low
+
+  * New upstream version
+  * debian/patches/fix-ubuntu-unittests.patch: Refreshed
+  * debian/patches/fix-doc-no-network.patch: Refreshed
+  * swift.docs: Add changelog
+  * swift.install: Remove missing binaries.
+  * debian/control: Bump to version 3.9.3
+  * debian/swift.install: Add swift-temp-url and swift-form-signature.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 18 Jun 2012 09:30:05 -0400
+
+swift (1.4.8-0ubuntu2) precise; urgency=low
+
+  * debian/patches/fix-ubuntu-unittests.patch: Refreshed
+    to fix testsuite failures.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 12 Apr 2012 12:05:29 -0400
+
+swift (1.4.8-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+  * debian/patches/fix-ubuntu-unittests.patch: Refreshed.
+  * debian/patches/fix-doc-no-network.patch: Dont access network when
+    trying to build docs.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 10 Apr 2012 09:23:54 -0400
+
+swift (1.4.7-0ubuntu3) precise; urgency=low
+
+  * debian/rules: Make the build fail if the testsuite doesnt pass.
+  * debian/patches/fix-ubuntu-unittests.patch: Various fixes to build
+    swift in the buildds. (LP: #961871)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 26 Mar 2012 12:11:25 -0400
+
+swift (1.4.7-0ubuntu2) precise; urgency=low
+
+  * Fixup upstart configurations (LP: #954477):
+    - d/rules: Correctly generate ALL upstart configurations when
+      building for Ubuntu.
+    - d/*.upstart.in: Update upstart config's to use new conf file locations.
+
+ -- James Page <james.page@ubuntu.com>  Thu, 15 Mar 2012 15:34:19 +0000
+
+swift (1.4.7-0ubuntu1) precise; urgency=low
+
+  [ Chuck Short ]
+  * New upstream release.
+
+  [ Thierry Carrez (ttx) ]
+  * Remove swift-stats-populate, swift-stats-report and stats.conf-sample to
+    match Swift 1.4.7 contents
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 09 Mar 2012 13:26:07 -0500
+
+swift (1.4.7~20120302.1721-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 02 Mar 2012 13:27:27 -0500
+
+swift (1.4.7~20120224.1690-0ubuntu1) precise; urgency=low
+
+  [ Chuck Short ]
+  * New upstream release.
+
+  [ Chmouel Boudjnah ]
+  * Add more samples to packages (LP:#667935)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 24 Feb 2012 09:10:12 -0500
+
+swift (1.4.7~20120210.1686-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+  * debian/control: Add python-paste.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 10 Feb 2012 09:41:51 -0500
+
+swift (1.4.6~20120202.1676-0ubuntu1) precise; urgency=low
+
+  * New upstream version.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 03 Feb 2012 09:35:18 -0500
+
+swift (1.4.6~20120119.1666-0ubuntu2) precise; urgency=low
+
+  * Update swift.install to reflect release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 26 Jan 2012 09:05:51 -0500
+
+swift (1.4.6~20120119.1666-0ubuntu1) precise; urgency=low
+
+  [Chuck Short]
+  * New upstream release.
+
+  [ Daniel T Chen ]
+  * debian/control: Fix Vcs entries.
+  * debian/swift.install: Add new scripts. Fixes FTBFS.
+
+  [ Marc Cluet ]
+  * Changed swift-proxy upstart script to watch /etc/swift/proxy-server.conf
+    (LP:#917893)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 20 Jan 2012 13:20:46 -0500
+
+swift (1.4.6~20120112.1660-0ubuntu1) precise; urgency=low
+
+  [Chuck Short]
+  * New upstream release.
+  * Merged changes from upstream packaging, thanks to Thierry Carrez.
+  * debian/rules:
+    + Remove egg-info on clean.
+
+  [Thierry Carrez (ttx)]
+  * Added usr/bin/swift-recon[-cron] to swift package.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 09 Jan 2012 11:26:25 -0500
+
+swift (1.4.5~20111202.1634-0ubuntu3) precise; urgency=low
+
+  * debian/swift.manpages: Remove swauth man pages.
+
+ -- Matthias Klose <doko@ubuntu.com>  Wed, 21 Dec 2011 18:29:35 +0100
+
+swift (1.4.5~20111202.1634-0ubuntu2) precise; urgency=low
+
+  [ Chuck Short ]
+  * Drop swauth man pages. (LP: #900888)
+  * debian/control:
+    - Clean up build depends.
+    - Update VCS info to point to the right branches.
+  * debian/rules: Run the swift testsuite.
+  * debian/python-swift.postinst: Change user's shell to /bin/false.
+  * Fix some lintian warnings.
+
+  [ Thierry Carrez (ttx) ]
+  * Ship swift-oldies and swift-orphans in swift package
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 16 Dec 2011 09:45:28 -0500
+
+swift (1.4.5~20111202.1634-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 02 Dec 2011 09:49:32 -0500
+
+swift (1.4.5~20111117.1632-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+  * Convert init scripts to upstart.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 18 Nov 2011 13:25:16 -0500
+
+swift (1.4.4~20111108.1612-0ubuntu1) precise; urgency=low
+
+  * New upstream release.
+  * debian/rules: Add --fail-missing.
+  * Update .isntall files. (LP: #882679, #841853)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 11 Nov 2011 10:49:12 -0500
+
+swift (1.4.4~20111014.1599-0ubuntu1) precise; urgency=low
+
+  * New upstream verison.
+  * Dropped:
+    - debian/patches/backport-change-swift-ring-builder-exit-codes.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 21 Oct 2011 13:50:47 -0400
+
+swift (1.4.3-0ubuntu2) oneiric; urgency=low
+
+  [ Adam Gandelman ]
+  * debian/patches/backport-change-swift-ring-builder-exit-codes: Standardize
+    exit codes now to reduce hassles after future upgrades (LP: #836922)
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 30 Sep 2011 15:00:26 -0400
+
+swift (1.4.3-0ubuntu1) oneiric; urgency=low
+
+  [Chuck Short]
+  * New upstream release.
+
+  [Monty Taylor]
+  * Work around dh_python2 for lucid. (LP: #848971)
+
+ -- Monty Taylor <mordred@inaugust.com>  Fri, 16 Sep 2011 15:40:19 -0400
+
+swift (1.4.3~20110902.354-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 02 Sep 2011 14:10:27 -0400
+
+swift (1.4.3~20110823.347-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 26 Aug 2011 14:11:09 -0400
+
+swift (1.4.3~20110811.341-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 12 Aug 2011 05:33:16 -0400
+
+swift (1.4.3~20110728.333-0ubuntu1) UNRELEASED; urgency=low
+
+  [ Soren Hansen ]
+  * New upstream snapshot.
+  * Remove debian-changes patch file.
+  * Remove SOURCES.txt in clean target to avoid gettings its changes in
+    our diff.gz.
+  * Add "status" support to all init scripts.
+  * Use "shutdown" instead of "stop" as the action argument for swift-
+    init. This shuts down the services gracefully (letting live requests
+    finish).
+  * Add swift-dispersion-{report,populate} to swift.install.
+
+  [ Thomas Goirand ]
+  * Added missing adduser and lsb-base dependency.
+  * Made the long description longer (it was really minimalistic).
+  * Reworked all Debian init.d scripts.
+  * Added many missing manpages.
+  * Added default container-server.conf & object-server.conf files.
+
+  [ James Page ]
+  * Added debian/python-swift.postrm:  Remove swift user when purging
+    package (LP: #825670).
+
+ -- James Page <james.page@ubuntu.com>  Tue, 16 Aug 2011 10:33:00 +0100
+
+swift (1.4.2-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release.
+  * debian/control:
+    - Update vcs infomration.
+    - Cleaned up build dependencies.
+    - Bump standards to version 3.9.2.
+  * debian/README.Source: Add doc to upload swift to the ubuntu archive.
+  * dh_python2 transition.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 28 Jul 2011 10:39:51 -0400
+
+swift (1.4.2~20110624.319-0ubuntu3) oneiric; urgency=low
+
+  * Clean up missing files.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 27 Jun 2011 06:30:51 -0400
+
+swift (1.4.2~20110624.319-0ubuntu2) oneiric; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 24 Jun 2011 14:00:18 -0400
+
+swift (1.4.1-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Mon, 20 Jun 2011 13:08:04 -0400
+
+swift (1.4.1~20110615.r304-0ubuntu1) oneiric; urgency=low
+
+  [ Gregory Holt ]
+  * Removed swauth references.
+
+  [ Soren Hansen ]
+  * st was renamed to swift.
+
+  [ Chuck Short ]
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 16 Jun 2011 09:25:37 -0400
+
+swift (1.4-dev+bzr300-0ubuntu1) oneiric; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 31 May 2011 14:29:10 -0400
+
+swift (1.3.0-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Fri, 15 Apr 2011 08:25:53 -0400
+
+swift (1.3-rc+bzr266-0ubuntu1) UNRELEASED; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Thu, 14 Apr 2011 09:38:42 -0400
+
+swift (1.2.0+bzr208-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+
+ -- Chuck Short <zulcss@ubuntu.com>  Tue, 12 Apr 2011 10:32:30 -0400
+
+swift (1.2.0-0ubuntu1) natty; urgency=low
+
+  * New upstream release.
+  * Updated VC locations in control file.
+  * Set maintainer properly for Ubuntu.
+
+ -- Monty Taylor <mordred@inaugust.com>  Wed, 16 Feb 2011 08:50:48 -0800
+
+swift (1.1.0+bzr173-0ubuntu1) natty; urgency=low
+
+  * Fresh snapshot.
+  * Updated watch file to also know about the new tarballs place.
+  * Update Maintainer to point to myself.
+  * Add a get-orig-source target to debian/rules.
+
+ -- Soren Hansen <soren@ubuntu.com>  Sat, 15 Jan 2011 00:19:38 +0100
+
+swift (1.0.99+1.1.0rc1-1) unstable; urgency=low
+
+  * New upstream release.
+  * Updated to standards version 3.9.1.
+  * Use jquery package to provide jquery.js.
+  * Updated some of the control file to make lintian happy.
+
+ -- Monty Taylor <mordred@inaugust.com>  Tue, 19 Oct 2010 14:32:17 -0700
+
+swift (1.0.2-7) unstable; urgency=low
+
+  * Added swift-bench to swift package.
+
+ -- Monty Taylor <mordred@inaugust.com>  Mon, 18 Oct 2010 09:14:22 -0700
+
+swift (1.0.2-6) unstable; urgency=low
+
+  * swift-auth-create-account is now swift-auth-add-user.
+
+ -- Greg Holt <gholt@rackspace.com>  Fri, 03 Sep 2010 13:32:20 +0000
+
+swift (1.0.2-5) unstable; urgency=low
+
+  * Add a step in debian/rules to create doc/build if it doesn't exist.
+
+ -- Monty Taylor <mordred@inaugust.com>  Wed, 25 Aug 2010 08:55:45 -0700
+
+swift (1.0.2-4) unstable; urgency=low
+
+  * Fixed the depend on sphinx - it actually only needs to be >= 1.0.
+  * Added paste-deploy as a depend.
+
+ -- Monty Taylor <mordred@inaugust.com>  Tue, 24 Aug 2010 12:02:31 -0700
+
+swift (1.0.2-3) unstable; urgency=low
+
+  [ Greg Holt ]
+  * Added a png to the docs.
+
+  [ Monty Taylor ]
+  * Add rsync and remove duplicate net-tools dependency.
+  * Added Jay Payne to uploaders.
+  * Added Greg Holt to uploaders.
+  * Updated VCS location to use UDD locations.
+  * We actually depend on 1.0 of sphinx.
+
+ -- Monty Taylor <mordred@inaugust.com>  Tue, 24 Aug 2010 00:02:00 -0700
+
+swift (1.0.2-2) unstable; urgency=low
+
+  * Created python-swift package and actually put the python files in it.
+  * Added python build dep.
+  * Added debhelper token to postinst script. Also removed the
+    byte-compiling of the files, since python-support should do that for us.
+  * Cleaned up control file - removed homepage entries in description,
+    removed trailing periods.
+  * Changed provides in swift-proxy to match policy.
+
+ -- Monty Taylor <mordred@inaugust.com>  Wed, 28 Jul 2010 13:32:55 -0700
+
+swift (1.0.2-1) unstable; urgency=low
+
+  * New upstream release.
+  * Added VCS info to control file.
+
+ -- Monty Taylor <mordred@inaugust.com>  Thu, 22 Jul 2010 18:32:02 -0500
+
+swift (1.0.1-1) unstable; urgency=low
+
+  * New upstream release.
+
+ -- Monty Taylor <mordred@inaugust.com>  Mon, 19 Jul 2010 11:22:41 -0500
+
+swift (1.0.0-1) unstable; urgency=low
+
+  [ Michael Barton ]
+  * Initial release
+
+  [ Monty Taylor ]
+  * Added docs to doc system.
+
+ -- Monty Taylor <mordred@inaugust.com>  Wed, 14 Jul 2010 10:41:11 -0500

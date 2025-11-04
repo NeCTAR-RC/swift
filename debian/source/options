@@ -1,0 +1,3 @@
+extend-diff-ignore = "^[^/]*[.]egg-info/"
+extend-diff-ignore = "^[.]gitreview$"
+extend-diff-ignore = "^[.]launchpad.yaml$"

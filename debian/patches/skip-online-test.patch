@@ -1,0 +1,33 @@
+Description: Skip test that is erroring with "gaierror:
+  [Errno -2] Name or service not known" as LP builds don't
+  have network access.
+Author: Corey Bryant <corey.bryant@canonical.com>
+Forwarded: no
+Last-Update: 2017-08-01
+
+--- a/test/unit/common/test_utils.py
++++ b/test/unit/common/test_utils.py
+@@ -41,6 +41,7 @@
+ import re
+ import socket
+ import string
++import testtools
+ import sys
+ import json
+ import math
+@@ -55,6 +56,7 @@
+ from textwrap import dedent
+ 
+ import tempfile
++import testtools
+ import time
+ import unittest
+ import fcntl
+@@ -2315,6 +2317,7 @@
+             with mock.patch('swift.common.utils.os.rmdir', _m_rmdir):
+                 self.assertRaises(OSError, utils.remove_directory, dir_name)
+ 
++    @testtools.skip("Skipped by Ubuntu")
+     @with_tempdir
+     def test_is_file_older(self, tempdir):
+         ts = utils.Timestamp(time.time() - 100000)

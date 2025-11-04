@@ -1,0 +1,8 @@
+Tests: swift-daemons
+Depends:
+ swift,
+ swift-account,
+ swift-container,
+ swift-object,
+ swift-proxy,
+Restrictions: needs-root

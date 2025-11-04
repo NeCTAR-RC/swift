@@ -1,0 +1,3 @@
+skip-test-local-py36.patch
+skip-online-test.patch
+skip-py312-failures.patch

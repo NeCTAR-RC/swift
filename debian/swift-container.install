@@ -1,0 +1,4 @@
+debian/swift-container-generator /lib/systemd/system-generators
+usr/bin/swift-container-*
+usr/bin/swift-manage-shard-ranges
+usr/bin/swift-reconciler-enqueue
